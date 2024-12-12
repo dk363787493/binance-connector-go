@@ -1,4 +1,4 @@
-module github.com/binance/binance-connector-go
+module github.com/dk363787493/binance-connector-go
 
 go 1.21
 
