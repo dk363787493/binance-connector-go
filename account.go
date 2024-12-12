@@ -320,10 +320,12 @@ func (s *CreateOrderService) Do(ctx context.Context, opts ...RequestOption) (res
 		r.setParam("quantity", strconv.FormatFloat(*s.quantity, 'f', -1, 64))
 	}
 	if s.quoteOrderQty != nil {
-		r.setParam("quoteOrderQty", *s.quoteOrderQty)
+		//r.setParam("quoteOrderQty", *s.quoteOrderQty)
+		r.setParam("quoteOrderQty", strconv.FormatFloat(*s.quoteOrderQty, 'f', -1, 64))
 	}
 	if s.price != nil {
-		r.setParam("price", *s.price)
+		//r.setParam("price", *s.price)
+		r.setParam("price", strconv.FormatFloat(*s.price, 'f', -1, 64))
 	}
 	if s.newClientOrderId != nil {
 		r.setParam("newClientOrderId", *s.newClientOrderId)
